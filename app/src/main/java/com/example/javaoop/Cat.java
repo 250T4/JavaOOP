@@ -3,20 +3,25 @@ package com.example.javaoop;
 import android.util.Log;
 
 public class Cat extends Animal {
-    int age;
-    String name;
+    protected int age;
+    protected String name;
+    protected String breed;
+    protected String color;
 
     public Cat() {
-
+        this.name = "John Doe";
+        this.age = -1;
     }
 
-    public Cat(int age, String name) {
-       this.age = age;
+    public Cat(int age, String name, String breed, String color) {
+        this.age = age;
         this.name = name;
+        this.breed = breed;
+        this.color = color;
     }
 
     public void talk() {
-        Log.i("talk()", "Meow! My name is " + name +
-                ", and I'm " + age + " years old.");
+        Log.i("talk()", "Meow! I'm cat. My name is " + name +
+                ", I'm breed " + breed + " and " + color + " coloration " + age + " years old.");
     }
 }
