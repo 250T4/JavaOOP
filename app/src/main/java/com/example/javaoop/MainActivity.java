@@ -17,12 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Cat cat1 = new Cat();
-        Log.i("number0fLegs","cat1 number of legs: "  + cat1.number0fLegs + Cat.whatCatsLike());
+        cat1.talk();
 
-        Lion lion = new Lion();
-        lion.talk();
+        Cat cat2 = new Cat(5, "Vaska");
+        cat2.talk();
 
+        Cat cat3 = new Cat(8, "Murzik");
+        cat3.talk();
 
-
+        Cat.CatMood catMood = new Cat().new CatMood();
+        Log.i("level0fMood", String.valueOf(catMood.level0fMood));
     }
 }
